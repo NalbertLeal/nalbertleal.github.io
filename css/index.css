@@ -34,7 +34,7 @@ body {
         position: relative;
         display: block;
         top: -28%;
-        left: 33%;
+        left: 28%;
     }
 
     .logo-letters {
@@ -60,7 +60,7 @@ body {
 
     .social-networks-logos {
         position: relative;
-        margin-left: 20%;
+        margin-left: 10%;
         z-index: 1;
         display: inline-block;
         height: 3em;
@@ -82,6 +82,14 @@ body {
 
     .github {
         background: url("../imgs/Octocat.png") no-repeat center;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+    }
+
+    .linkedin {
+        background: url("../imgs/linkedin.png") no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
