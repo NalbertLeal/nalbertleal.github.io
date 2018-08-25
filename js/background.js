@@ -73,6 +73,14 @@ for(var i=0; i<800; i++) {
 function animate() {
     canvasCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
 
+    canvasCtx.rect(0, 0, canvas.width, canvas.height);
+
+    var grd = canvasCtx.createLinearGradient(0, 0, canvas.width, canvas.height);
+    grd.addColorStop(0, '#8ED6FF');
+    grd.addColorStop(1, '#0FFFB3');
+    canvasCtx.fillStyle = grd;
+    canvasCtx.fill();
+
     for(var i=0; i<circles.length; i++) {
         circles[i].move();
     }
