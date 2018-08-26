@@ -2,20 +2,52 @@ var Circle = function(radius, ctx) {
     this.radius = radius,
     this.x = Math.random() * window.innerWidth;
     this.y = Math.random() * window.innerHeight;
-    this.speed = (Math.random()+2) * 2;
+    this.speed = Math.random();
     if(Math.random() * 2 < 1) {
         this.speed = -this.speed;
     }
     this.speedX = this.speed;
     this.speedY = this.speed;
     this.ctx = ctx;
+    this.closeCircles = [];
+    this.circlesMaxDistance = 60;
     this.draw =  function() {
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
-        // this.ctx.strokeStyle = "black";
-        // this.ctx.stroke();
         ctx.fillStyle = "rgba(0, 0, 210, 0.350)";
         ctx.fill();
+    }
+    this.findCloseCircles = function(circlesArray) {
+        this.closeCircles = [];
+        for(var i=0; i<circlesArray.length; i++) {
+            if(circlesArray[i].x == this.x && circlesArray[i].y == this.y) {
+                continue;
+            }
+            if(circlesArray[i].x < this.x && circlesArray[i].x >= this.x-this.circlesMaxDistance) {
+                if(circlesArray[i].y < this.y && circlesArray[i].y > this.y-this.circlesMaxDistance) {
+                    this.closeCircles.push(circlesArray[i]);
+                }
+                if(circlesArray[i].y > this.y && circlesArray[i].y <= this.y+this.circlesMaxDistance) {
+                    this.closeCircles.push(circlesArray[i]);
+                }
+            }
+            if(circlesArray[i].x > this.x && circlesArray[i].x <= this.x+this.circlesMaxDistance) {
+                if(circlesArray[i].y < this.y && circlesArray[i].y > this.y-this.circlesMaxDistance) {
+                    this.closeCircles.push(circlesArray[i]);
+                }
+                if(circlesArray[i].y > this.y && circlesArray[i].y <= this.y+this.circlesMaxDistance) {
+                    this.closeCircles.push(circlesArray[i]);
+                }
+            }
+        }
+    }
+    this.drawLineCloseCircles = function() {
+        for(var i=0; i<this.closeCircles.length; i++) {
+            this.ctx.moveTo(this.x, this.y);
+            this.ctx.lineTo(this.closeCircles[i].x, this.closeCircles[i].y);
+            this.ctx.strokeStyle = '#f0f0f0'
+            this.ctx.stroke();
+        }
     }
     this.move = function() {
         if(this.x+this.radius > window.innerWidth) {
@@ -63,7 +95,7 @@ var canvasCtx = canvas.getContext("2d");
 let radius = 3;
 var circles = [];
 
-for(var i=0; i<800; i++) {
+for(var i=0; i<100; i++) {
     var c = new Circle(radius, canvasCtx);
     c.draw();
 
@@ -83,6 +115,8 @@ function animate() {
 
     for(var i=0; i<circles.length; i++) {
         circles[i].move();
+        circles[i].findCloseCircles(circles);
+        circles[i].drawLineCloseCircles();
     }
 
     requestAnimationFrame(animate);
