@@ -14,7 +14,12 @@ var Circle = function(radius, ctx) {
     this.draw =  function() {
         this.ctx.beginPath();
         this.ctx.arc(this.x, this.y, this.radius, 0, Math.PI * 2, false);
+<<<<<<< HEAD
+        // ctx.fillStyle = "rgba(0, 0, 210, 0.350)";
+        ctx.fillStyle = "rgba(0, 0, 0, 1.000)";
+=======
         ctx.fillStyle = "rgba(0, 0, 210, 0.350)";
+>>>>>>> 6292d17d89d48df3cec952270dd4cf19d5206860
         ctx.fill();
     }
     this.findCloseCircles = function(circlesArray) {
@@ -45,7 +50,12 @@ var Circle = function(radius, ctx) {
         for(var i=0; i<this.closeCircles.length; i++) {
             this.ctx.moveTo(this.x, this.y);
             this.ctx.lineTo(this.closeCircles[i].x, this.closeCircles[i].y);
+<<<<<<< HEAD
+            // this.ctx.strokeStyle = '#f0f0f0'
+            this.ctx.strokeStyle = '#000'
+=======
             this.ctx.strokeStyle = '#f0f0f0'
+>>>>>>> 6292d17d89d48df3cec952270dd4cf19d5206860
             this.ctx.stroke();
         }
     }
@@ -107,10 +117,13 @@ function animate() {
 
     canvasCtx.rect(0, 0, canvas.width, canvas.height);
 
-    var grd = canvasCtx.createLinearGradient(0, 0, canvas.width, canvas.height);
-    grd.addColorStop(0, '#8ED6FF');
-    grd.addColorStop(1, '#0FFFB3');
-    canvasCtx.fillStyle = grd;
+    // canvas background
+    var imageObj = new Image();
+    imageObj.src = 'imgs/small_marmore-branco.jpg';
+
+    var pattern = canvasCtx.createPattern(imageObj, 'repeat');
+    canvasCtx.rect(0, 0, canvas.width, canvas.height);
+    canvasCtx.fillStyle = pattern;
     canvasCtx.fill();
 
     for(var i=0; i<circles.length; i++) {
