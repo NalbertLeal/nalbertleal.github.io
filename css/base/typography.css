@@ -1,6 +1,6 @@
 @font-face{
     font-family: 'Electrickle';
-    src: url('../fonts/Electrickle.ttf');
+    src: url('../../fonts/Electrickle.ttf');
 }
 
 @media(min-width: 768px) {

@@ -1,6 +1,6 @@
 @media(min-width: 768px) {
     .twitter {
-        background: url("../imgs/twitter-logo.png") no-repeat center;
+        background: url("../../imgs/twitter-logo.png") no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -8,7 +8,7 @@
     }
 
     .github {
-        background: url("../imgs/Octocat.png") no-repeat center;
+        background: url("../../imgs/Octocat.png") no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
@@ -16,7 +16,7 @@
     }
 
     .linkedin {
-        background: url("../imgs/linkedin.png") no-repeat center;
+        background: url("../../imgs/linkedin.png") no-repeat center;
         -webkit-background-size: cover;
         -moz-background-size: cover;
         -o-background-size: cover;
