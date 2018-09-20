@@ -1,0 +1,18 @@
+{
+  "name": "nalbertwebsite",
+  "version": "0.0.1",
+  "description": "Nalbert page",
+  "main": "-",
+  "scripts": {
+    "test": "-"
+  },
+  "repository": {
+    "type": "git",
+    "url": "-"
+  },
+  "keywords": [
+    "personal-website"
+  ],
+  "author": "Nalbert Gabriel Melo Leal",
+  "license": "ISC"
+}

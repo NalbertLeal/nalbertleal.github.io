@@ -1,0 +1,132 @@
+@media(max-width: 730px) {
+    .div-canvas {
+        position: fixed;
+        display: block;
+        height: 100%;
+        width: 100%;
+    }
+    
+    .container {
+        position: fixed;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        flex-direction: column;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+    }
+    
+    .top-colors {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 5em;
+        width: 60%;
+    }
+    
+    .color-btn {
+        height: 4em;
+        width: 4em;
+        border-radius: 2em;
+        border: 0.4em solid #fff;
+    }
+    
+    .color-marbel {
+        background: rgba(232, 12, 122, 1);
+    }
+    
+    .color-dark-red {
+        background: rgba(64, 8, 0, 1);
+    }
+    
+    .color-blue {
+        background: lightblue;
+    }
+    
+    .logo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 5em;
+        width: 70%;
+        color: #fff;
+        font-family: 'Electrickle';
+        font-size: 6em;
+    }
+    
+    .social {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: 10em;
+        width: 100%;
+    }
+    
+    .social-parte {
+        position: relative;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 50%;
+        width: 80%;
+    }
+    
+    .circle-btn-bg {
+        display: block;
+        height: 4em;
+        width: 4em;
+        border-radius: 2em;
+        background: rgba(255, 255, 255, 0.6);
+    }
+    
+    .circle-btn {
+        display: block;
+        height: 3em;
+        width: 3em;
+        border-radius: 1.5em;
+    }
+    
+    .dev-to-btn {
+        display: block;
+        background: url('../img/devto.png') no-repeat center;
+        background-size: cover;
+    }
+    
+    .github-btn {
+        display: block;
+        background: url('../img/github.png') no-repeat center;
+        background-size: cover;
+    }
+    
+    .linkedin-btn {
+        display: block;
+        background: url('../img/linkedin.svg') no-repeat center;
+        background-size: cover;
+    }
+    
+    .publick-key-btn {
+        display: block;
+        background: url('../img/key.png') no-repeat center;
+        background-size: cover;
+    }
+    
+    .speaker-deck-btn {
+        display: block;
+        background: url('../img/speaker-deck.png') no-repeat center;
+        background-size: cover;
+    }
+    
+    .telegram-btn {
+        display: block;
+        background: url('../img/telegram.svg') no-repeat center;
+        background-size: cover;
+    }
+    
+    .twitter-btn {
+        display: block;
+        background: url('../img/twitter.jpg') no-repeat center;
+        background-size: cover;
+    }
+}
