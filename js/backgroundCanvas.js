@@ -2,7 +2,7 @@ var pointsColor = "rgba(255, 255, 255, 0.400)";
 
 let pointsNumber;
 if(window.innerWidth < 721) {
-    pointsNumber = 50;
+    pointsNumber = 30;
 }
 else {
     pointsNumber = 200;
