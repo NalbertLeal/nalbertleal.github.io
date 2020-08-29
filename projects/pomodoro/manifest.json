@@ -3,8 +3,8 @@
   "short_name": "Pomodoro",
   "display": "standalone",
   "orientation": "portrait",
-  "scope": "/projects/pomodoro",
-  "start_url": "/projects/pomodoro",
+  "scope": "/projects/pomodoro/",
+  "start_url": "/projects/pomodoro/",
   "background_color": "#FF6347",
   "theme_color": "#FF6347",
   "icons": [
