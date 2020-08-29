@@ -1,0 +1,22 @@
+{
+  "name": "Pomodoro",
+  "short_name": "Pomodoro",
+  "display": "standalone",
+  "orientation": "portrait",
+  "scope": "/projects/pomodoro",
+  "start_url": "/projects/pomodoro",
+  "background_color": "#FF6347",
+  "theme_color": "#FF6347",
+  "icons": [
+    {
+      "src": "assets/imgs/icons/pomodoro-192x192.png",
+      "type": "image/png",
+      "sizes": "192x192"
+    },
+    {
+      "src": "assets/imgs/icons/pomodoro-512x512.png",
+      "type": "image/png",
+      "sizes": "512x512"
+    }
+  ]
+}
