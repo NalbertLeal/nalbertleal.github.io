@@ -15,7 +15,7 @@ self.addEventListener('activate', (event) => {
 })
 
 self.addEventListener('fetch', (event) => {
-  event.responWith(
+  event.respondWith(
     fetch(event.request)
       .then(res => {
         const resClone = res.clone()
