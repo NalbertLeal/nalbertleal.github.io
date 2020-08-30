@@ -3,7 +3,7 @@
   // views
   import TimerView from "./views/TimerView.svelte";
 
-  let baseURL = '/projects/pomodoro/public/build'
+  let baseURL = '/projects/pomodoro/public'
   let currentPage;
 
   page(baseURL, () => (currentPage = TimerView));
