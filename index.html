@@ -1,47 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="Description" content="Webpage to apresent Nalbert Leal, a curious and fullstack developer.">
-    <meta name="theme-color" content="#000"/>
-
-    <title>Nalbert Webpage :: Home</title>
-
-    <link rel="stylesheet" href="css/desktop.css">
-    <link rel="stylesheet" href="css/mobile.css">
-    <link rel="stylesheet" href="css/normalize.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nalbert :: Home</title>
+  <link rel="stylesheet" href="./assets/css/normalize.css">
+  <link rel="stylesheet" href="./assets/css/index.css">
 </head>
-<body> 
-    <div id="canvas-bg" class="div-canvas">
-        <canvas id="background"></canvas>
-    </div>
-    <div class="container">
-        <div class="top-colors">
-            <div class="color-btn color-marbel" onclick="colorToMarbel()"></div>
-            <div class="color-btn color-dark-red" onclick="colorToRed()"></div>
-            <div class="color-btn color-blue" onclick="colorToBlue()"></div>
-        </div>
-        <div class="logo">
-            Nalbert Leal
-        </div>
-        <div class="social">
-            <div class="social-parte">
-                <a class="circle-btn dev-to-btn" title="profile on dev.to" target="blank" href="https://dev.to/nalbertg"></a>
-                <a class="circle-btn github-btn" title="profile on github" target="blank" href="https://github.com/NalbertLeal"></a>
-                <a class="circle-btn linkedin-btn" title="profile on linkedin" target="blank" href="https://www.linkedin.com/in/nalbert-gabriel-melo-leal"></a>
-            </div>
-            <div class="social-parte">
-                <a class="circle-btn publick-key-btn" title="link to my RSA publick key" target="blank" href="https://github.com/NalbertLeal/important-files/blob/master/public.key"></a>
-                <a class="circle-btn speaker-deck-btn" title="speaker deck profile" target="blank" href="https://speakerdeck.com/nalbertleal"></a>
-                <a class="circle-btn telegram-btn" title="link to talk with my using the telegram" target="blank" href="http://t.me/nalbertleal"></a>
-                <a class="circle-btn twitter-btn" title="twitter profile" target="blank" href="https://twitter.com/NalbertgLeal"></a>
-            </div>
-        </div>
-    </div>
+<body>
+  <canvas id="background-canvas"></canvas>
+  <section class="main">
+    <header>
+      <!-- <img src="./assets/images/nalbert-brand.jpg" alt="nalbert brand" class="nalbert-brand"> -->
+      <div></div>
+      <nav>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <article class="content">
+      <div class="textBlock">
+        <h1>I'm <span class="nalbert-name">Nalbert Leal</span> <br> and i know <span id="skills"></span></h1>
+        <button class="curriculum" onclick="openCurriculum()">See curriculum</button>
+      </div>
+      <div class="social-networks">
+        <ul>
+          <li><a href="https://br.linkedin.com/in/nalbert-gabriel-melo-leal" target="blanck"><img src="./assets/images/linkedin_icon.svg" alt="Linkedin logo"></a></li>
+          <li><a href="https://www.kaggle.com/nalbertleal" target="blanck"><img src="./assets/images/kaggle_icon.svg" alt="kaggle logo"></a></li>
+          <li><a href="https://github.com/NalbertLeal" target="blanck"><img src="./assets/images/github_icon.svg" alt="Github logo"></a></li>
+          <li><a href="https://www.instagram.com/nalbertgml/" target="blanck"><img src="./assets/images/instagram_icon.svg" alt="instagram logo"></a></li>
+          <li><a href="https://t.me/nalbertleal" target="blanck"><img src="./assets/images/telegram_icon.svg" alt="telegram logo"></a></li>
+        </ul>
+      </div>
+    </article>
+  </section>
 
-    <script src="js/backgroundCanvas.js"></script>
-    <script src="js/index.js"></script>
+  <script src="./assets/js/skillsAnimation.js"></script>
+  <script src="./assets/js/canvasBackgroundAnimation.js"></script>
+  <script src="./assets/js/index.js"></script>
 </body>
 </html>

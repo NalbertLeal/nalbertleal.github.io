@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="Description" content="Webpage to apresent Nalbert Leal, a curious and fullstack developer.">
+    <meta name="theme-color" content="#000"/>
+
+    <title>Nalbert Webpage :: Home</title>
+
+    <link rel="stylesheet" href="css/desktop.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="stylesheet" href="css/normalize.css">
+</head>
+<body> 
+    <div id="canvas-bg" class="div-canvas">
+        <canvas id="background"></canvas>
+    </div>
+    <div class="container">
+        <div class="top-colors">
+            <div class="color-btn color-marbel" onclick="colorToMarbel()"></div>
+            <div class="color-btn color-dark-red" onclick="colorToRed()"></div>
+            <div class="color-btn color-blue" onclick="colorToBlue()"></div>
+        </div>
+        <div class="logo">
+            Nalbert Leal
+        </div>
+        <div class="social">
+            <div class="social-parte">
+                <a class="circle-btn dev-to-btn" title="profile on dev.to" target="blank" href="https://dev.to/nalbertg"></a>
+                <a class="circle-btn github-btn" title="profile on github" target="blank" href="https://github.com/NalbertLeal"></a>
+                <a class="circle-btn linkedin-btn" title="profile on linkedin" target="blank" href="https://www.linkedin.com/in/nalbert-gabriel-melo-leal"></a>
+            </div>
+            <div class="social-parte">
+                <a class="circle-btn publick-key-btn" title="link to my RSA publick key" target="blank" href="https://github.com/NalbertLeal/important-files/blob/master/public.key"></a>
+                <a class="circle-btn speaker-deck-btn" title="speaker deck profile" target="blank" href="https://speakerdeck.com/nalbertleal"></a>
+                <a class="circle-btn telegram-btn" title="link to talk with my using the telegram" target="blank" href="http://t.me/nalbertleal"></a>
+                <a class="circle-btn twitter-btn" title="twitter profile" target="blank" href="https://twitter.com/NalbertgLeal"></a>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/backgroundCanvas.js"></script>
+    <script src="js/index.js"></script>
+</body>
+</html>

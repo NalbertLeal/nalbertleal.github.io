@@ -1,0 +1,143 @@
+/* color 1 32DBA7*/
+/* color 2 5BF244*/
+/* color 3 34A2FA*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+#background-canvas {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  z-index: 1;
+}
+
+.main {
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* background: #fff; */
+  z-index: 2;
+}
+
+.main > header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header > .nalbert-brand {
+  position: relative;
+  width: 80px;
+}
+
+header > nav > ul {
+  list-style: none;
+}
+
+header > nav > ul > li {
+  display: inline-block;
+  margin: 0 10px;
+  transition: 0.5s;
+}
+
+header > nav > ul > li:hover {
+  transform: translateY(-25%);
+}
+
+header > nav > ul > li > a {
+  text-decoration: none;
+  color: #333;
+}
+
+.textBlock {
+  position: relative;
+  width: 100%;
+}
+
+.textBlock > h1 {
+  line-height: 1.4em;
+  font-size: 3rem;
+  color: #32DBA7;
+}
+
+.textBlock > h1 > span {
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+.textBlock > h1 > #skills {
+  color: #34A2FA;
+  font-family: monospace;
+}
+
+.textBlock > h1 > #skills::after {
+  content: "|";
+  color: #000;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+
+.curriculum {
+  border: none;
+  box-shadow: 2px 2px #333;
+  padding: 10px;
+  border-radius: 5px;
+  color: #fff;
+  background: #32DBA7;
+  font-size: 2rem;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.curriculum:active {
+  box-shadow: none;
+  transform: translateY(2px);
+}
+
+.social-networks {
+  position: absolute;
+  top: 50%;
+  right: 30px;
+  transform: translate(-50%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-networks ul {
+  list-style: none;
+}
+
+.social-networks ul li {
+  list-style: none;
+  transition: 0.5s;
+}
+
+.social-networks ul li:hover {
+  transform: translateX(-25%);
+}
+
+.social-networks ul li a img {
+  width: 35px;
+  margin: 10px 0;
+}
