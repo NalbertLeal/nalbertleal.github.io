@@ -84,8 +84,6 @@ class AnimationControler {
       self.ctx.clearRect(0, 0, window.innerWidth, window.innerHeight)
       self.points.forEach(point => {
         point.move()
-        self._findPointsClusters(point)
-        self._drawPointsCluters()
       })
       requestAnimationFrame(AnimationControler._animate(self))
     }
@@ -117,12 +115,6 @@ class AnimationControler {
       point.draw()
       this.points.push(point)
     }
-  }
-
-  _findPointsClusters() {
-  }
-
-  _drawPointsCluters() {
   }
 
   startAnimation() {
